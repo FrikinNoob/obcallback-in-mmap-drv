@@ -54,3 +54,6 @@ typedef OB_PREOP_CALLBACK_STATUS
 ```
 `RegistrationContext` is always passed in `RCX`, and when registering the callback we usually set it to `NULL`.  
 This means you can use a `jmp rcx` gadget in a valid module as the callback address and put your real callback’s address into `RegistrationContext`, so that the system jumps into your code.
+
+
+MiLookupDataTableEntry : https://doxygen.reactos.org/d4/d67/sysldr_8c.html#af88787f6aa47e5cd93b686656feb6c7a
